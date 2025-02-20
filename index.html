@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaroop Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: url('assets/images/HeaderBG.jpg') no-repeat center center/cover;
+            position: relative;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        nav .menu {
+            display: flex;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #ff6f61;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            align-content: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #ff6f61;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 10px;
+        }
+
+        .skills li,
+        .experience li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+            /* Ensure only one bullet point */
+            padding-left: 20px;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav .menu {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .download-btn {
+                display: inline-block;
+                background: #ff6f61;
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 1em;
+                transition: background 0.3s ease;
+            }
+
+            .download-btn:hover {
+                background: #e55f51;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Swaroop Kumar Yadav</h1>
+        <p>Electronics and Communication Engineering | 3rd Year</p>
+    </header>
+    <nav>
+        <div class="logo">S2S</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="menu" id="menu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="about" class="section">
+            <h2><img src="assets/logos/user.png" alt="icon"
+                    style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">About
+                Me</h2>
+            <p>A detail-oriented and technically adept electronics and communication engineering student with hands-on
+                experience on VLSI, embedded systems, and circuit design, with wider knowledge in digital media. .</p>
+                <a href="assets/resume.pdf" download class="download-btn">
+                    <i class="fas fa-download" style="margin-right: 5px;"></i> Download Resume
+                </a>
+        </div>
+        <div id="skills" class="section">
+            <h2><img src="assets/logos/skill.png" alt="icon"
+                    style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">Skills
+            </h2>
+            <ul class="skills">
+                <li><strong>VLSI Design:</strong> Experienced in VHDL/Verilog, FPGA programming, and CMOS digital
+                    circuit layout designing.</li>
+                <li><strong>Embedded Systems:</strong> Experienced in C/C++ programming for microcontrollers like
+                    Arduino (Nano, UNO, Mega), ESP8266, ESP32, MSP430, 8085/8051 and in IoT applications.</li>
+                <li><strong>PCB Design:</strong> Skilled in using tool like EasyEDA for schematic capture and PCB
+                    layout.</li>
+                <li><strong>Simulation Tools:</strong> Familiar with LTspice, Proteus, and MATLAB for circuit simulation
+                    & analysis and Arduino IDE, Energia, Code Composer Studio(CCS) for microcontroller programming.</li>
+                <li><strong>Programming Languages:</strong> C, C++, Python, and basic knowledge of scripting languages.
+                </li>
+            </ul>
+        </div>
+        <div id="experience" class="section">
+            <h2><img src="assets/logos/experience.png" alt="icon"
+                    style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">Experience
+            </h2>
+            <ul class="experience">
+
+                <li>
+                    <strong>Embedded Systems Project | Smart Home Automation</strong><br>
+                    August 2023 - Present<br>
+                    Developed an IoT-based home automation system using ESP32 microcontroller and cloud integration.
+                </li>
+                <li>
+                    <strong>Academic Project | Low Power VLSI Circuit Design</strong><br>
+                    January 2023 - April 2023<br>
+                    Designed low-power CMOS circuits and optimized power consumption using advanced techniques.
+                </li>
+            </ul>
+        </div>
+        <div id="projects" class="section">
+            <h2><img src="assets/logos/workflow.png" alt="icon"
+                    style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">Projects
+            </h2>
+            <div>
+                <h3>Water Quality Monitoring System using Turbidity Sensor & Arduino UNO</h3>
+                <img src="https://github.com/user-attachments/assets/9ebe5d1e-f6ba-4e65-bfc3-ff3a428909dd"
+                    alt="Water Quality Monitoring System circuit" class="project-image"
+                    style="width: 600px; height: 400px;">
+                <p>
+                    <li>In this project, we use an Arduino UNO and a turbidity sensor to monitor water quality.</li>
+                    <li>The turbidity sensor measures the turbidity level of the water and sends the data to the
+                        Arduino.</li>
+                </p>
+            </div>
+            <div>
+                <h3>200nm based CMOS VLSI Circuit Design</h3>
+                <img src="https://github.com/user-attachments/assets/d17bbe55-522f-4009-85c9-bd81b7d27ec0"
+                    alt="CMOS NAND GATE LAyout Design" class="project-image" style="width: 600px; height: 400px;">
+                <p>
+                    <li>Designed different logic gates (AND, OR, NOT, NAND, NOR, XOR) of 200nm based CMOS layout
+                        circuits.</li>
+                </p>
+            </div>
+            <div>
+                <h3>RFID based Lock System using Arduino UNO</h3>
+                <img src="https://private-user-images.githubusercontent.com/75106252/351404721-e987c642-9a6e-47e2-833d-57d887d0f153.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAwODAxNjMsIm5iZiI6MTc0MDA3OTg2MywicGF0aCI6Ii83NTEwNjI1Mi8zNTE0MDQ3MjEtZTk4N2M2NDItOWE2ZS00N2UyLTgzM2QtNTdkODg3ZDBmMTUzLmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyMFQxOTMxMDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iZGM2YTQ3MDlhN2U1M2Q1OGJhOTFmZjE2YmY4Yzg1YzY4YmEzOGI1YTUxYmQxYzEwZTBiZGFlNjIwMmNlNWVkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ycwz6FkXrn6U5hb_CLNHgubmMSX9hoYQ40IeOmM4ZVs"
+                    alt="RFID-based LOCk circuit" class="project-image" style="width: 600px; height: 400px;">
+                <p>
+                    <li>The RFID-based Lock System is a security application that leverages Radio Frequency
+                        Identification (RFID) technology for access control.</li>
+                    <li>The system utilizes an Arduino UNO microcontroller, an LCD display, LEDs, a buzzer, and an RFID
+                        reader to verify user credentials and grant or deny access. This project demonstrates a
+                        practical and efficient way to secure physical spaces.</li>
+                </p>
+            </div>
+        </div>
+        <div id="contact" class="section">
+            <h2><img src="assets/logos/phone-guide.png" alt="icon"
+                    style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">Contact
+            </h2>
+            <p><img src="assets/logos/envelope.png" alt="Email"
+                    style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 5px;">
+                swaroop.k.yadav@gmail.com</p>
+            <p><a href="https://www.linkedin.com/in/Swaroop2sky" target="_blank"><img src="assets/logos/linkedin.png"
+                        alt="LinkedIn Logo"
+                        style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 5px;">
+                    linkedin.com/in/Swaroop2sky</a></p>
+            <p><a href="https://github.com/S2Sofficial" target="_blank"><img src="assets/logos/github.png"
+                        alt="GitHub Logo"
+                        style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 5px;">
+                    github.com/S2Sofficial</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Swaroop Kumar Yadav. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to toggle mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+                if (window.innerWidth <= 768) {
+                    menu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
