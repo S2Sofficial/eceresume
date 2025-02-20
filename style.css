@@ -1,11 +1,16 @@
-body {
+       body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             color: #333;
             overflow-x: hidden;
-        }
+            }
+        /* Preloader Animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
 
         header {
             background: url('assets/images/HeaderBG.jpg') no-repeat center center/cover;
