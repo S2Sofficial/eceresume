@@ -25,7 +25,7 @@
             align-items: center;
             text-align: center;
             color: white;
-            overflow: hidden;
+            overflow: visible;
         }
 
         header::before {
@@ -113,6 +113,43 @@
             padding-bottom: 10px;
         }
 
+        .download-btn {
+            display: inline-block;
+            background: #ff6f61;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s ease;
+
+        }
+
+        .download-btn:hover {
+            background: #e55f51;
+        }
+
+        .github-btn {
+            display: inline-block;
+            background: #ff9a8d;
+            /* Faded version of #ff6f61 */
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            /* Slightly smaller padding */
+            border-radius: 5px;
+            font-size: 0.9em;
+            /* Slightly smaller font size */
+            transition: background 0.3s ease;
+            margin-top: 10px;
+            /* Add spacing above the button */
+        }
+
+        .github-btn:hover {
+            background: #e57f74;
+            /* Darker version of the faded color */
+        }
+
         .skills li,
         .experience li {
             margin-bottom: 10px;
@@ -175,20 +212,7 @@
                 display: block;
             }
 
-            .download-btn {
-                display: inline-block;
-                background: #ff6f61;
-                color: white;
-                text-decoration: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 1em;
-                transition: background 0.3s ease;
-            }
 
-            .download-btn:hover {
-                background: #e55f51;
-            }
         }
     </style>
 </head>
@@ -214,12 +238,32 @@
             <h2><img src="assets/logos/user.png" alt="icon"
                     style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">About
                 Me</h2>
-            <p>A detail-oriented and technically adept electronics and communication engineering student with hands-on
-                experience on VLSI, embedded systems, and circuit design, with wider knowledge in digital media. .</p>
-                <a href="assets/resume.pdf" download class="download-btn">
-                    <i class="fas fa-download" style="margin-right: 5px;"></i> Download Resume
-                </a>
+            <p>
+                I’m Swaroop Kumar Yadav, a driven and curious Electronics and Communication Engineering student
+                currently in my 3rd year. With a passion for innovation and problem-solving, I enjoy exploring the
+                intersection of hardware and software to create impactful solutions. My journey in engineering has been
+                fueled by a desire to understand how technology can transform everyday life.
+            </p>
+            <p>
+                Whether it’s designing low-power CMOS circuits, developing efficient traffic control systems, or working
+                on RFID-based security applications, I thrive on turning ideas into functional prototypes. Beyond
+                technical expertise, I bring creativity and attention to detail to every project I undertake.
+            </p>
+            <p>
+                Outside of the classroom, I am deeply interested in the use of digital media in contemporary engineering
+                processes. I believe that communication and visualization are key to bridging the gap between technical
+                ideas and practical implementation. This drives me not only to create innovative projects but also to
+                present them in a way that fosters collaboration and understanding.
+            </p>
+            <p>
+                I’m always eager to learn, grow, and contribute to meaningful projects that push the boundaries of
+                what’s possible. If you’re interested in collaborating or discussing opportunities, feel free to reach
+                out—I’d love to connect!
+            </p>
+            <a href="assets/resume.pdf" download="Swaroop_Kumar_Yadav_Resume.pdf" class="download-btn">Download
+                Resume</a>
         </div>
+
         <div id="skills" class="section">
             <h2><img src="assets/logos/skill.png" alt="icon"
                     style="width: 20px; height: 20px; margin-right: 10px; filter: brightness(0) saturate(100%) invert(29%) sepia(77%) saturate(3468%) hue-rotate(352deg) brightness(180%) contrast(90%);">Skills
@@ -268,6 +312,8 @@
                     <li>In this project, we use an Arduino UNO and a turbidity sensor to monitor water quality.</li>
                     <li>The turbidity sensor measures the turbidity level of the water and sends the data to the
                         Arduino.</li>
+                    <a href="https://s2sofficial.github.io/Water_Turbidity_Detector_UNO/" target="_blank"
+                        class="github-btn">View on GitHub</a>
                 </p>
             </div>
             <div>
@@ -277,6 +323,8 @@
                 <p>
                     <li>Designed different logic gates (AND, OR, NOT, NAND, NOR, XOR) of 200nm based CMOS layout
                         circuits.</li>
+                    <a href="https://s2sofficial.github.io/CMOS_Layout_Designing/" target="_blank"
+                        class="github-btn">View on GitHub</a>
                 </p>
             </div>
             <div>
@@ -289,6 +337,8 @@
                     <li>The system utilizes an Arduino UNO microcontroller, an LCD display, LEDs, a buzzer, and an RFID
                         reader to verify user credentials and grant or deny access. This project demonstrates a
                         practical and efficient way to secure physical spaces.</li>
+                    <a href="https://s2sofficial.github.io/rfid_arduinoUNO/" target="_blank" class="github-btn">View on
+                        GitHub</a>
                 </p>
             </div>
         </div>
